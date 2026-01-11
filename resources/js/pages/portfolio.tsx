@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Head } from '@inertiajs/react';
+import { motion } from 'framer-motion';
 
 
 const Portfolio: React.FC<[]> = () => {
@@ -263,17 +264,31 @@ const Portfolio: React.FC<[]> = () => {
             </section>
 
             {/* FLOATING DOCK */}
-            <div className={`fixed bottom-10 left-1/2 -translate-x-1/2 border px-2 py-2 rounded-full flex items-center gap-1 z-50 shadow-2xl transition-all ${isDark ? 'bg-[#111111]/80 backdrop-blur-xl border-white/10' : 'bg-white/80 backdrop-blur-xl border-slate-200'}`}>
-                {['Home', 'Work', 'skills'].map((item) => (
-                    <a 
-                        key={item} 
-                        href={`#${item.toLowerCase()}`} 
-                        className={`px-5 py-2 rounded-full text-[10px] uppercase tracking-widest font-bold transition hover:bg-emerald-500/10 hover:text-emerald-500 ${isDark ? 'text-white' : 'text-slate-900'}`}
+            <div
+                className={`fixed bottom-10 left-1/2 -translate-x-1/2 border px-2 py-2 rounded-full flex items-center gap-1 z-50 shadow-2xl
+                ${isDark ? 'bg-[#111111]/80 backdrop-blur-xl border-white/10' : 'bg-white/80 backdrop-blur-xl border-slate-200'}`}
+            >
+                {['Home', 'Work', 'Skills'].map((item) => (
+                    <motion.button
+                    key={item}
+                    whileTap={{ scale: 0.85 }}
+                    whileHover={{ scale: 1.08 }}
+                    transition={{ type: 'spring', stiffness: 500, damping: 20 }}
+                    onClick={() => {
+                        document
+                        .getElementById(item.toLowerCase())
+                        ?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className={`
+                        px-5 py-2 rounded-full text-[10px] uppercase tracking-widest font-bold
+                        hover:bg-emerald-500/10 hover:text-emerald-500
+                        ${isDark ? 'text-white' : 'text-slate-900'}
+                    `}
                     >
-                        {item}
-                    </a>
+                    {item}
+                    </motion.button>
                 ))}
-            </div>
+                </div>
         </div>
     );
 };
