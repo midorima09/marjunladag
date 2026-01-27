@@ -17,14 +17,14 @@ const Projects: React.FC<[]> = () => {
 
     
     const projects = [
-        { company: 'RackRackApp IT Solutions', link: '', year: 2025,title: 'DMS Store', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'View store orders, credit balance, and place orders.' },
-        { company: 'RackRackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsdealer', year: 2025,title: 'DMS Dealer', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'View sales, stock levels, and purchase records.' },
-        { company: 'RackRackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsstock', year: 2025,title: 'DMS Stock', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'Provides real-time visibility into stock levels and inventory status.' },
-        { company: 'RackRackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsops', year: 2025,title: 'DMS OPS', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'The Outlet Tagging feature ensures accurate association of sales agents, products, and transactions with specific outlets.' },
-        { company: 'RackRackApp IT Solutions', link: 'https://dmsbusinesscare.com/', year: 2024, title: 'Dealer Management System', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Tailwind', 'MySQL', 'Firebase'], desc: 'Handles product tracking, sales and reports.' },
-        { company: 'RackRackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsagent', year: 2024,title: 'DMS POS', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'Designed to help sales agents and simplify dealership operations, featuring daily route targets, live truck and inventory tracking, and merchandise issuance.' },
-        { company: 'RackRackApp IT Solutions', link: '', year: 2024, title: 'RackMotors', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Tailwind', 'MySQL'], desc: 'Manage sales, product tracking and generate sales records in real-time.' },
-        { company: 'RackRackApp IT Solutions', link: '', year: 2023, title: 'RackPOS', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Bootstrap', 'MySQL'], desc: 'Manage sales, product tracking and generate sales records in real-time.' },
+        { company: 'RackApp IT Solutions', link: '', year: 2025,title: 'DMS Store', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'View store orders, credit balance, and place orders.' },
+        { company: 'RackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsdealer', year: 2025,title: 'DMS Dealer', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'View sales, stock levels, and purchase records.' },
+        { company: 'RackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsstock', year: 2025,title: 'DMS Stock', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'Provides real-time visibility into stock levels and inventory status.' },
+        { company: 'RackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsops', year: 2025,title: 'DMS OPS', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'The Outlet Tagging feature ensures accurate association of sales agents, products, and transactions with specific outlets.' },
+        { company: 'RackApp IT Solutions', link: 'https://dmsbusinesscare.com/', year: 2024, title: 'Dealer Management System', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Tailwind', 'MySQL', 'Firebase'], desc: 'Handles product tracking, sales and reports.' },
+        { company: 'RackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsagent', year: 2024,title: 'DMS POS', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'Designed to help sales agents and simplify dealership operations, featuring daily route targets, live truck and inventory tracking, and merchandise issuance.' },
+        { company: 'RackApp IT Solutions', link: '', year: 2024, title: 'RackMotors', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Tailwind', 'MySQL'], desc: 'Manage sales, product tracking and generate sales records in real-time.' },
+        { company: 'RackApp IT Solutions', link: '', year: 2023, title: 'RackPOS', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Bootstrap', 'MySQL'], desc: 'Manage sales, product tracking and generate sales records in real-time.' },
         { company: 'Quality Cluc Leather Inc', link: '', year: 2022, title: 'QCLI Sales and Inventory Management System', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Tailwinf', 'MySQL'], desc: 'Streamlines store operations with purchase management, sales tracking, and inventory control.' },
         { company: 'Quality Cluc Leather Inc', link: '', year: 2021, title: 'QCLI Sales and Inventory Management System', type: 'Windows App', tech: ['VB.NET', 'MySQL'], desc: 'Streamlines store operations with purchase management, product production, sales tracking, and inventory control.' },
        ];
@@ -104,10 +104,13 @@ const Projects: React.FC<[]> = () => {
                                         </h4>
 
                                         {/* Mobile description */}
-
-                                        {/* Mobile description */}
                                         <p className="md:hidden mt-2 text-sm opacity-70 leading-relaxed">
                                             {project.desc}
+                                        </p>
+
+                                        {/* Mobile Company */}
+                                        <p className="md:hidden mt-2 group-hover:text-emerald-500 text-sm opacity-70 leading-relaxed">
+                                            {project.company}
                                         </p>
 
                                         {/* Mobile tech */}
@@ -143,9 +146,9 @@ const Projects: React.FC<[]> = () => {
                                     <div className="flex flex-wrap gap-2">
                                     {project.tech.map((t, idx) => (
                                         <span
-                                        key={idx}
-                                        className={`text-[11px] px-2 py-0.5 rounded-full border
-                                        ${isDark ? 'border-white/10 text-white/60' : 'border-slate-200 text-slate-600'}`}
+                                            key={idx}
+                                            className={`text-[11px] px-2 py-0.5 rounded-full border
+                                            ${isDark ? 'border-white/10 text-white/60' : 'border-slate-200 text-slate-600'}`}
                                         >
                                         {t}
                                         </span>
@@ -167,10 +170,10 @@ const Projects: React.FC<[]> = () => {
                                     >
                                         View
                                         <svg
-                                        className="w-4 h-4"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
+                                            className="w-4 h-4"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
                                         >
                                         <path
                                             strokeLinecap="round"
