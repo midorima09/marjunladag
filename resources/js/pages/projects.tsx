@@ -17,16 +17,16 @@ const Projects: React.FC<[]> = () => {
 
     
     const projects = [
-        { link: '', year: 2025,title: 'DMS Store', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'View store orders, credit balance, and place orders.' },
-        { link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsdealer', year: 2025,title: 'DMS Dealer', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'View sales, stock levels, and purchase records.' },
-        { link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsstock', year: 2025,title: 'DMS Stock', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'Provides real-time visibility into stock levels and inventory status.' },
-        { link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsops', year: 2025,title: 'DMS OPS', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'The Outlet Tagging feature ensures accurate association of sales agents, products, and transactions with specific outlets.' },
-        { link: 'https://dmsbusinesscare.com/', year: 2024, title: 'Dealer Management System', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Tailwind', 'MySQL', 'Firebase'], desc: 'Handles product tracking, sales and reports.' },
-        { link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsagent', year: 2024,title: 'DMS POS', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'Designed to help sales agents and simplify dealership operations, featuring daily route targets, live truck and inventory tracking, and merchandise issuance.' },
-        { link: '', year: 2024, title: 'RackMotors', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Tailwind', 'MySQL'], desc: 'Manage sales, product tracking and generate sales records in real-time.' },
-        { link: '', year: 2023, title: 'RackPOS', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Bootstrap', 'MySQL'], desc: 'Manage sales, product tracking and generate sales records in real-time.' },
-        { link: '', year: 2022, title: 'QCLI Sales and Inventory Management System', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Tailwinf', 'MySQL'], desc: 'Streamlines store operations with purchase management, sales tracking, and inventory control.' },
-        { link: '', year: 2021, title: 'QCLI Sales and Inventory Management System', type: 'Windows App', tech: ['VB.NET', 'MySQL'], desc: 'Streamlines store operations with purchase management, product production, sales tracking, and inventory control.' },
+        { company: 'RackRackApp IT Solutions', link: '', year: 2025,title: 'DMS Store', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'View store orders, credit balance, and place orders.' },
+        { company: 'RackRackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsdealer', year: 2025,title: 'DMS Dealer', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'View sales, stock levels, and purchase records.' },
+        { company: 'RackRackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsstock', year: 2025,title: 'DMS Stock', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'Provides real-time visibility into stock levels and inventory status.' },
+        { company: 'RackRackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsops', year: 2025,title: 'DMS OPS', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'The Outlet Tagging feature ensures accurate association of sales agents, products, and transactions with specific outlets.' },
+        { company: 'RackRackApp IT Solutions', link: 'https://dmsbusinesscare.com/', year: 2024, title: 'Dealer Management System', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Tailwind', 'MySQL', 'Firebase'], desc: 'Handles product tracking, sales and reports.' },
+        { company: 'RackRackApp IT Solutions', link: 'https://play.google.com/store/apps/details?id=com.rackapp.dmsagent', year: 2024,title: 'DMS POS', type: 'Mobile App', tech: ['React Native', 'Expo Go', 'Firebase', 'JavaScript'], desc: 'Designed to help sales agents and simplify dealership operations, featuring daily route targets, live truck and inventory tracking, and merchandise issuance.' },
+        { company: 'RackRackApp IT Solutions', link: '', year: 2024, title: 'RackMotors', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Tailwind', 'MySQL'], desc: 'Manage sales, product tracking and generate sales records in real-time.' },
+        { company: 'RackRackApp IT Solutions', link: '', year: 2023, title: 'RackPOS', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Bootstrap', 'MySQL'], desc: 'Manage sales, product tracking and generate sales records in real-time.' },
+        { company: 'Quality Cluc Leather Inc', link: '', year: 2022, title: 'QCLI Sales and Inventory Management System', type: 'Web App', tech: ['Laravel', 'Vue.js', 'Inertia', 'Tailwinf', 'MySQL'], desc: 'Streamlines store operations with purchase management, sales tracking, and inventory control.' },
+        { company: 'Quality Cluc Leather Inc', link: '', year: 2021, title: 'QCLI Sales and Inventory Management System', type: 'Windows App', tech: ['VB.NET', 'MySQL'], desc: 'Streamlines store operations with purchase management, product production, sales tracking, and inventory control.' },
        ];
 
 
@@ -36,7 +36,7 @@ const Projects: React.FC<[]> = () => {
 
             <Link 
                 href="/" 
-                className={`fixed top-10 left-10 md:left-24 z-[60] group flex items-center gap-2 text-sm font-bold uppercase tracking-widest transition-all ${isDark ? 'text-white/50 hover:text-emerald-500' : 'text-slate-400 hover:text-emerald-600'}`}
+                className={`fixed top-10 left-10 md:left-24 z-[60] group flex items-center gap-2 text-sm font-bold uppercase tracking-widest bg-[#fafafa] rounded p-2 transition-all ${isDark ? 'text-white/50 hover:text-emerald-500 bg-black' : 'text-slate-400 hover:text-emerald-600'}`}
             >
                 <svg 
                     className="w-4 h-4 transform group-hover:-translate-x-1 transition-transform" 
@@ -74,6 +74,7 @@ const Projects: React.FC<[]> = () => {
                             >
                                 <th className="py-4 font-bold">Project</th>
                                 <th className="py-4 font-bold">Description</th>
+                                <th className="py-4 font-bold">Company</th>
                                 <th className="py-4 font-bold">Built with</th>
                                 <th className="py-4 font-bold text-right">Link</th>
                             </tr>
@@ -94,39 +95,46 @@ const Projects: React.FC<[]> = () => {
 
                                         {/* Year */}
                                         <span className="block text-[10px] font-mono tracking-widest opacity-40 mb-1">
-                                        {project.year || '2025'}
+                                            {project.year || '2025'}
                                         </span>
 
                                         {/* Project title */}
                                         <h4 className="font-bold text-lg leading-tight group-hover:text-emerald-500 transition-colors">
-                                        {project.title}
+                                            {project.title}
                                         </h4>
 
                                         {/* Mobile description */}
+
+                                        {/* Mobile description */}
                                         <p className="md:hidden mt-2 text-sm opacity-70 leading-relaxed">
-                                        {project.desc}
+                                            {project.desc}
                                         </p>
 
                                         {/* Mobile tech */}
                                         <div className="md:hidden flex flex-wrap gap-1 mt-2">
-                                        {project.tech.map((t, idx) => (
-                                            <span
-                                            key={idx}
-                                            className={`text-[10px] px-2 py-0.5 rounded-full border
-                                            ${isDark ? 'border-white/10 text-white/50' : 'border-slate-200 text-slate-500'}`}
-                                            >
-                                            {t}
-                                            </span>
-                                        ))}
+                                            {project.tech.map((t, idx) => (
+                                                <span
+                                                key={idx}
+                                                className={`text-[10px] px-2 py-0.5 rounded-full border
+                                                ${isDark ? 'border-white/10 text-white/50' : 'border-slate-200 text-slate-500'}`}
+                                                >
+                                                {t}
+                                                </span>
+                                            ))}
                                         </div>
                                     </div>
                                 </td>
 
-
                                 {/* DESCRIPTION (DESKTOP ONLY) */}
+                                <td className="py-6 hidden md:table-cell align-top px-2">
+                                    <span className="text-base opacity-70">
+                                        {project.desc}
+                                    </span>
+                                </td>
+
                                 <td className="py-6 hidden md:table-cell align-top">
                                     <span className="text-base opacity-70">
-                                    {project.desc}
+                                        {project.company}
                                     </span>
                                 </td>
 
